@@ -9,7 +9,7 @@ def compute_product_orders(filename, header):
     :param header: List[str]
         The headers of the file
     :return: dict
-        The count of each product and number of first orders with Product ID as the key
+        The count of each product and and number of first orders with Product ID as the key
     '''
     product_orders = dict()
     with open(filename) as csvfile:
@@ -39,11 +39,9 @@ def assign_departments(filename, header, product_orders):
     '''
 
     :param filename: str
-        Input filename
     :param header: List[str]
-        Headers of the CSV file
     :param product_orders: dict
-        The count of each product and number of first orders with Product ID as the key
+        The count of each product and and number of first orders with Product ID as the key
     '''
 
     with open(filename) as csvfile:
@@ -62,13 +60,6 @@ def assign_departments(filename, header, product_orders):
 
 
 def group_by_department(product_orders):
-    '''
-
-    :param product_orders: dict
-        The count of each product, number of first orders and corresponding Department ID with Product ID as the key
-    :return: dict
-        Dictionary sorted based on Department ID containing the department counts
-    '''
 
     department_orders = dict()
     for i in product_orders:
@@ -88,13 +79,6 @@ def group_by_department(product_orders):
 
 
 def save_output(filename, department_orders):
-    '''
-
-    :param filename: str
-        Output filename
-    :param department_orders: dict
-        Dictionary sorted based on Department ID containing the department counts
-    '''
 
     with open(filename, 'w') as csvfile:
         writer = csv.writer(csvfile)

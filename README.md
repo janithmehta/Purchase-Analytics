@@ -25,7 +25,7 @@ a dictionary would be the most efficient way to access a product as it came.
 ## Tests
 
 * test_1 : Default Test
-* test_2 : Decimal Values as instead of Integers
+* test_2 : Decimal Values as instead of Integers in product IDS. Eg:- 15.0
 * test_3 : Values enclosed in inverted commas. Eg: "15"
 * test_4 : Missing values
 
